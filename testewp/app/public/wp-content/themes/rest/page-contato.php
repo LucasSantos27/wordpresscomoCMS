@@ -2,33 +2,26 @@
 //Template Name: Contato
 ?>
 <?php get_header(); ?>
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<section class="container contato">
-			<h2 class="subtitulo"><?php the_title(); ?></h2>
+<section class="container contato">
+	<h2 class="subtitulo"><?php the_title(); ?></h2>
 
-			<div class="grid-16">
-				<a href="https://www.google.com.br/maps" target="_blank"><img src="img/rest-mapa.jpg" alt="Fachada do Rest"></a>
-			</div>
+	<div class="grid-16">
+		<a href="<?php the_field('link_maps'); ?>" target="_blank"><img src="<?php the_field('mapa_rest'); ?>" alt="Mapa para Rest"></a>
+	</div>
 
+
+	<?php
+	$infos = get_field('info');
+	if (isset($infos)) {
+		foreach ($infos as $info) {
+			?>
 			<div class="grid-1-3 contato-item">
-				<h2>Dados</h2>
-				<p>21 2422-9999</p>
-				<p>contato@rest.com</p>
-				<p>facebook.com/rest/</p>
+				<h2><?php echo $info['title']; ?></h2>
+				<p><?php echo $info['text1']; ?></p>
+				<p><?php echo $info['text2']; ?></p>
+				<p><?php echo $info['text3']; ?></p>
 			</div>
-			<div class="grid-1-3 contato-item">
-				<h2>Horários</h2>
-				<p>Segunda à Sexta: 10 às 23</p>
-				<p>Sábado: 14 às 23</p>
-				<p>Domingo: 14 às 22</p>
-			</div>
-			<div class="grid-1-3 contato-item">
-				<h2>Endereço</h2>
-				<p>Rua Marechal, 29</p>
-				<p>Copacabana - Rio de Janeiro</p>
-				<p>Brasil - Terra - Via Láctea</p>
-			</div>
-		</section>
-<?php endwhile;
-else : endif; ?>
+	<?php }
+	} ?>
+</section>
 <?php get_footer(); ?>
