@@ -44,17 +44,4 @@ function cmb2_fields_home() {
     'id' => 'chamada_produtos',
     'type' => 'text',
   ]);
-
-  $cmb->add_field([
-    'name' => 'Chamada Portfólio',
-    'id' => 'chamada_portifolio',
-    'type' => 'text',
-  ]);
-
-  $cmb->add_field([
-    'name' => 'Chamada Sobre',
-    'id' => 'chamada_sobre',
-    'type' => 'text',
-  ]);
-
 }

@@ -12,5 +12,9 @@ function the_field($key, $page_id = 0) {
 
 // carrega os campos personalizados do CMB2
 require_once get_template_directory() . '/cmb2/home.php';
+require_once get_template_directory() . '/cmb2/paginas_internas.php';
+require_once get_template_directory() . '/cmb2/sobre.php';
+require_once get_template_directory() . '/cmb2/portfolio.php';
+
 
 ?>
