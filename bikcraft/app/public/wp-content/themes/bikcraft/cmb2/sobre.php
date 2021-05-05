@@ -16,7 +16,7 @@ function cmb2_fields_sobre() {
   $cmb->add_field([
     'name' => 'Missão',
     'id' => 'missao',
-    'type' => 'textarea_small',
+    'type' => 'wysiwyg',
   ]);
 
   $cmb->add_field([
