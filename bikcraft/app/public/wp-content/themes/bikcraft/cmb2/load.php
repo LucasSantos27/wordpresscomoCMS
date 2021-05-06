@@ -18,6 +18,7 @@ require_once get_template_directory() . '/cmb2/portfolio.php';
 require_once get_template_directory() . '/cmb2/contato.php';
 require_once get_template_directory() . '/cmb2/single_produtos.php';
 require_once get_template_directory() . '/cmb2/produtos.php';
+require_once get_template_directory() . '/cmb2/seo.php';
 
 
 ?>
