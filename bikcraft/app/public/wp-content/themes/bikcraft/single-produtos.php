@@ -3,7 +3,7 @@
 get_header();
 ?>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		<section class="container produto_item animar-interno">
 			<div class="grid-11">
@@ -18,8 +18,8 @@ get_header();
 		</section>
 
 		<?php include(TEMPLATEPATH . "/inc/produtos-orcamento.php"); ?>
-		
-<?php endwhile; else: endif; ?>
 
+<?php endwhile;
+else : endif; ?>
 
 <?php get_footer(); ?>

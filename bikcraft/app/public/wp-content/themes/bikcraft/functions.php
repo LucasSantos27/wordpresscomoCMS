@@ -71,7 +71,7 @@ function custom_post_type_produtos() {
 		'rewrite' => array('slug' => 'produtos', 'with_front' => true),
 		'query_var' => true,
 		'supports' => array('title', 'editor', 'page-attributes','post-formats'),
-    'show_in_rest' => true,
+
 		'labels' => array (
 			'name' => 'Produtos',
 			'singular_name' => 'Produto',
